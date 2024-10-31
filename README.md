@@ -61,4 +61,6 @@ PUT /canlender/{schedule}
   "password" : "1111"
 }
 
-정보진] (https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
+ERD
+-
+ ![사진](https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
