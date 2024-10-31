@@ -71,4 +71,3 @@ Method  /DELETE/{schedule}
 DELETE /canlender/{schedule}
 
 <H1>ERD</H1>
-* ![ERD 이미지](https://velog.velcdn.com/images/jangut600/post/f5374406-d3ad-4231-a3c7-e9597cc639f1/image.png)
