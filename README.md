@@ -128,7 +128,7 @@ update_date int
 password varchar() 
 
 )
-
+---
 2. 유저 생성 및 일정 생성 (Insert)
 ----
 
@@ -139,14 +139,14 @@ valuse ("1234", "qwer", "20", "2024_10_31 17:05:34")
 INSERT INTO schedules (schedules_id, user_id, name, create_date, update_date , password)
 
 valuse ("1234", "4321", "qwer123", "2024_10_31 17:05:34", "qwer123")
-
+---
 3. 전체 일정 조회 (Select)
 ---
 
 SELECT * 
 
 FROM schedules
-
+---
 4. 선태 일정 조회 (select)
 ---
 
@@ -155,11 +155,11 @@ SELET *
 FROM schedules
 
 WHERE schedules_id = 1;
-
+---
 5. 선택 일정 수정  (Update)
 ---
 UPDATE schedules SET name = "asdf123" , update_date = "2024_10_31 17:40:34"
-
+---
 6. 선택 일정 삭제 (DELETE)
 ---
 DELETE FROM schedules 
