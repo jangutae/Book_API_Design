@@ -20,7 +20,7 @@ API 명세
 |정보 삭제|선택한 일정 삭제|선택한 일정을 삭제합니다.|
 
 정보 생성 
----
+-
 일정을 생성합니다.
 
 Method : POST
@@ -32,8 +32,8 @@ POST /calendar
   "password : "0000"
 } 
 
-
-
+정보 조회
+-
 전체 일정을 조회합니다.
 
 Method : GET
@@ -48,7 +48,8 @@ Method : GET
 
 GET /canlender/{schedule}
 
-
+정보 수정
+-
 
 선택한 일정을 수정합니다.
 
@@ -60,7 +61,8 @@ PUT /canlender/{schedule}
   "password" : "1111"
 }
 
-
+정보 삭제
+-
 
 선택한 일정을 삭제합니다.
 
