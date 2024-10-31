@@ -31,7 +31,7 @@ POST /calendar
   "name" : "schedule"
   "password : "0000"
 } 
-
+------------------------
 전체 일정을 조회합니다.
 
 Method : GET
