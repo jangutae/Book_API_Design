@@ -1,7 +1,7 @@
-# Daily_API_Design
+# Daily_schedule
 
 
-<h1>Daily_API 명세서</h1>
+<h1>API 명세서</h1>
 
 <H5>- 일정 생성</H5>
 <H5>- 전체 일정 조회</H5>
