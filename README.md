@@ -31,18 +31,24 @@ POST /calendar
   "name" : "schedule"
   "password : "0000"
 } 
-------------------------
+
+
+
 전체 일정을 조회합니다.
 
 Method : GET
 
 GET /canlender/schedule
 
+
+
 선택한 일정을 조회합니다.
 
 Method : GET
 
 GET /canlender/{schedule}
+
+
 
 선택한 일정을 수정합니다.
 
@@ -52,6 +58,9 @@ PUT /canlender/{schedule}
 {
   "name" : "events"
   "password" : "1111"
+}
+
+
 
 선택한 일정을 삭제합니다.
 
