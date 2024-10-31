@@ -1,66 +1,30 @@
-# Daily_schedule
+# Schedule_manegemnet
 
-
-<h1>API 명세서</h1>
-
-<H5>- 일정 생성</H5>
-<H5>- 전체 일정 조회</H5>
-<H5>- 선택 일정 조회</H5>
-<H5>- 선택한 일정 수정</H5>
-<H5>- 선택한 일정 삭제</H5>
-
-API 명세
-
-| 구분 | API명 | 설명 | 
-|-----|---|---|
-|정보 생성|일정 생성|일정을 생성합니다.|
-|정보 조회|전체 일정 조회|전체 일정을 조회합니다.|
-|정보 조회|선택 일정 조회|선택한 일정을 조회합니다.|
-|정보 수정|선택한 일정 수정|선택한 일정을 수정합니다.|
-|정보 삭제|선택한 일정 삭제|선택한 일정을 삭제합니다.|
-
-정보 생성 
--
-일정을 생성합니다.
-
-Method : POST
-
-
-POST /calendar
-{
-  "name" : "schedule"
-  "password : "0000"
-} 
-
-정보 조회
--
-전체 일정을 조회합니다.
-
-Method : GET
-
-GET /canlender/schedule
-
-
-
-선택한 일정을 조회합니다.
-
-Method : GET
-
-GET /canlender/{schedule}
-
-정보 수정
+API 명세서
 -
 
-선택한 일정을 수정합니다.
+Schedules
+-
+|기능|Method|URL|Request|Response|상태코드|
+|----|---|---|---|---|---|
+|일정 생성|POST|/calander/schedules|요청 body|등록 정보|200: 정상 등록, 400:비정상값|
+|전체일정조회|GET|/calander/schedules|X|다건 응답 정보|200: 정상 조회|
+|선택일정조회|GET|/calander/schedules/{schedule_id}|X|단건 응답 정보|200: 정상조회, 404:일정이 사라짐|
+|선택일정수정|PUT|/calander/schedules/{schedule_id}|요청 body|수정 정보|200:정상등록, 400:비정상 값, 404: 일정이 사라짐|
+|선택일정삭제|DELETE|/calander/schedules/{schedule_id}|X||삭제 정보|204: 정상 등록, 404:일정이 사라짐|
 
-Method : PUT
+일정 생성 
+* 메소드 : POST
+* 요청URL : /canlander/schedules
 
-PUT /canlender/{schedule}
-{
-  "name" : "events"
-  "password" : "1111"
-}
+* request : schedules
 
+{ 
+  "schedule_id" : "1234"
+  "name" : "일정"
+  "PASSWORD" : "0000"
+  }
+  
 ERD
 -
  ![사진](https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
