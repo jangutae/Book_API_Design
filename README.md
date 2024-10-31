@@ -61,14 +61,4 @@ PUT /canlender/{schedule}
   "password" : "1111"
 }
 
-정보 삭제
--
-
-선택한 일정을 삭제합니다.
-
-Method  /DELETE/{schedule}
-
-DELETE /canlender/{schedule}
-
-<H1>ERD</H1>
-! [ERD] (https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
+정보진] (https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
