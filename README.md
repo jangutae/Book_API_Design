@@ -71,4 +71,4 @@ Method  /DELETE/{schedule}
 DELETE /canlender/{schedule}
 
 <H1>ERD</H1>
-![ERD](https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
+! [ERD] (https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
