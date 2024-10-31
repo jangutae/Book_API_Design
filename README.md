@@ -64,7 +64,7 @@ PUT /canlender/{schedule}
 
 선택한 일정을 삭제합니다.
 
-Method : DELETE
+Method  /DELETE/{schedule}
 
 DELETE /canlender/{schedule}
 
