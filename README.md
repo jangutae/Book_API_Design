@@ -36,7 +36,9 @@ Schedules
 
  * 본문
 
-   * request : 
+   * request :
+
+     
 
 |이름|타입|설명|필수|
 |name|String|작성자명|Y|
@@ -44,6 +46,8 @@ Schedules
 |content|String|일정 내용|N|
 
   * reponse : HTTP/1.1 200 OK
+
+    
 
 |이름|타입|설명|필수|
 |schedule|String|schedule의 id|Y|
