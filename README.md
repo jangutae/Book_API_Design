@@ -48,7 +48,7 @@ Schedules
 |---|---|---|---|
 |name|String|작성자명|Y|
 |password|String|비밀번호|Y|
-|content|String|일정 내용|N|
+|content|String|일정 내용|Y|
 
 
  * reponse 
@@ -74,7 +74,7 @@ Schedules
 
   {
   "schedule_id" : "1",
-  "name" : "과제",
+  "name" : "홍길동",
   "password" : "0000"
   "content : "lv.0 과제 마무리" 
   "create_date" : "2024-10-31 17:05:33",
@@ -96,9 +96,9 @@ Schedules
 |schedule_id|INT|schedule 의 id|Y|
 |name|String|작성자명|Y|
 |password|String|비밀번호|Y|
-|content|String|일정 내용|N|
+|content|String|일정 내용|Y|
 |create_date|INT|작성일자|Y|
-|update_date|INT|수정일자|N|
+|update_date|INT|수정일자|Y|
 
 
 
@@ -118,7 +118,7 @@ Schedules
 
   {
   "schedule_id" : "1",
-  "name" : "과제",
+  "name" : "홍길동",
   "password" : "0000"
   "content : "lv.0 과제 마무리" 
   "create_date" : "2024-10-31 17:05:33",
@@ -144,9 +144,9 @@ Schedules
 |schedule_id|INT|schedule 의 id|Y|
 |name|String|작성자명|Y|
 |password|String|비밀번호|Y|
-|content|String|일정 내용|N|
+|content|String|일정 내용|Y|
 |create_date|INT|작성일자|Y|
-|update_date|INT|수정일자|N|
+|update_date|INT|수정일자|Y|
 
 
 
@@ -184,7 +184,7 @@ Schedules
 |schedule_id|INT|schedule 의 id|Y|
 |name|String|작성자명|Y|
 |password|String|비밀번호|Y|
-|content|String|일정 내용|N|
+|content|String|일정 내용|Y|
 
   
 * reponse
@@ -240,15 +240,15 @@ SQL
 
 CREATE TABLE SCHEDULES (
 
-schedule_id int PRIMARY KEY AUTO_INCREMENT
+schedule_id int PRIMARY KEY AUTO_INCREMENT,
 
-name varchar() 
+name varchar(), 
 
-password varchar()
+password varchar(),
 
-content varchar()
+content varchar(),
 
-create_date int 
+create_date int, 
 
 update_date int
 
@@ -298,4 +298,4 @@ WHERE schedules_id = 1;
 
 ERD
 -
- ![사진](https://github.com/jangutae/Calander_API_Design/blob/main/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC2.png) 
+ ![사진]() 
