@@ -51,6 +51,7 @@ Schedules
     
 
 |이름|타입|설명|필수|
+|---|---|---|---|
 |schedule|String|schedule의 id|Y|
 
 전체 일정 조회
