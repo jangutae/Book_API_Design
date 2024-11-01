@@ -1,73 +1,179 @@
-# Daily_API_Design
+# Schedule_manegemnet
+
+API 명세서
 -
 
-<h1>Daily_API 명세서</h1>
-
-<H5>- 일정 생성</H5>
-<H5>- 전체 일정 조회</H5>
-<H5>- 선택 일정 조회</H5>
-<H5>- 선택한 일정 수정</H5>
-<H5>- 선택한 일정 삭제</H5>
-
-API 명세
-
-| 구분 | API명 | 설명 | 
-|-----|---|---|
-|정보 생성|일정 생성|일정을 생성합니다.|
-|정보 조회|전체 일정 조회|전체 일정을 조회합니다.|
-|정보 조회|선택 일정 조회|선택한 일정을 조회합니다.|
-|정보 수정|선택한 일정 수정|선택한 일정을 수정합니다.|
-|정보 삭제|선택한 일정 삭제|선택한 일정을 삭제합니다.|
-
-정보 생성 
+Schedules
 -
-일정을 생성합니다.
+|기능|Method|URL|Request|Response|상태코드|
+|----|---|---|---|---|---|
+|일정 생성|POST|/calander/schedules|요청 body|등록 정보|200: 정상 등록, 400:비정상값|
+|전체일정조회|GET|/calander/schedules|X|다건 응답 정보|200: 정상 조회|
+|선택일정조회|GET|/calander/schedules/{schedule_id}|X|단건 응답 정보|200: 정상조회, 404:일정이 사라짐|
+|선택일정수정|PUT|/calander/schedules/{schedule_id}|요청 body|수정 정보|200:정상등록, 400:비정상 값, 404: 일정이 사라짐|
+|선택일정삭제|DELETE|/calander/schedules/{schedule_id}|X||삭제 정보|204: 정상 등록, 404:일정이 사라짐|
 
-Method : POST
+일정 생성 
+-
+* 메소드 : POST
+* 요청URL : /canlander/schedules
+
+* request : POST/canlander/schedules
+
+{ 
+  "user_id" : "1234",
+  "name" : "일정",
+  "PASSWORD" : "0000"
+  }
+
+* reponse :
+
+{ 
+ "schedule_id" = "1"
+ }
+
+전체 일정 조회
+-
+* 메소드 : GET
+* 요청URL : /canlander/schedules
+
+* reponse : GET/canlander/schedules
+
+  {
+  "schedule_id" : "1",
+  "user_id" : "1234",
+  "name" : "과제",
+  "create_date" : "2024-10-31 17:05:33",
+  "update_date" : "2024-10-31 17:05:33"      
+}
+ 
+
+선택 일정 조회
+-
+* 메소드 : GET
+* 요청URL : /canlander/schedules/{schedule_id}
+
+* 요청 param 
+
+* reponse :
+
+  {
+  "schedule_id" : "1",
+  "user_id" : "1234",
+  "name" : "과제",
+  "create_date" : "2024-10-31 17:05:33",
+  "update_date" : "2024-10-31 17:05:33"      
+
+}
+선택 일정 수정
+-
+* 메소드 : PUT
+* 요청URL : /canlander/schedules/{schedule_id}
+
+* request : PUT/canlander/schedules/{schedule_id}
+
+{ "schedule_id" : "1",
+  "user_id" : "1234",
+  "name" : "과제",
+  }
 
 
-POST /calendar
+* reponse :
+
 {
-  "name" : "schedule"
-  "password : "0000"
-} 
-
-정보 조회
--
-전체 일정을 조회합니다.
-
-Method : GET
-
-GET /canlender/schedule
-
-
-
-선택한 일정을 조회합니다.
-
-Method : GET
-
-GET /canlender/{schedule}
-
-정보 수정
--
-
-선택한 일정을 수정합니다.
-
-Method : PUT
-
-PUT /canlender/{schedule}
-{
-  "name" : "events"
-  "password" : "1111"
+  "schedule_id" : "1",
+  "user_id" : "1234",
+  "name" : "과제",
 }
 
-정보 삭제
+선택 일정 삭제
 -
+* 메소드 : DELETE
+* 요청URL : /canlander/schedules/{schedule_id}
 
-선택한 일정을 삭제합니다.
+* request : DELETE/canlander/schedules/{schedule_id}
 
-Method  /DELETE/{schedule}
 
-DELETE /canlender/{schedule}
+SQL 
+--
 
-<H1>ERD</H1>
+---
+1. 테이블 생성 (Create)
+---
+
+CREATE TABLE USER (
+
+ USER_ID int PRIMAYY KEY,
+ 
+ nickname varchar(), 
+ 
+ age varchar(), 
+ 
+ create_date int, 
+ 
+ update_date int
+ 
+ )
+
+CREATE TABLE SCHEDULES (
+
+schedule_id int PRIMARY KEY 
+
+user_id int 
+
+name varchar() 
+
+create_date int 
+
+update_date int
+
+password varchar() 
+
+)
+
+---
+2. 유저 생성 및 일정 생성 (Insert)
+----
+
+INSERT INTO user (user_id, nickname, age, create_date, update_date)
+
+valuse ("1234", "qwer", "20", "2024_10_31 17:05:34")
+
+INSERT INTO schedules (schedules_id, user_id, name, create_date, update_date , password)
+
+valuse ("1234", "4321", "qwer123", "2024_10_31 17:05:34", "qwer123")
+
+---
+3. 전체 일정 조회 (Select)
+---
+
+SELECT * 
+
+FROM schedules
+
+---
+4. 선태 일정 조회 (select)
+---
+
+SELET *
+
+FROM schedules
+
+WHERE schedules_id = 1;
+
+---
+5. 선택 일정 수정  (Update)
+---
+
+UPDATE schedules SET name = "asdf123" , update_date = "2024_10_31 17:40:34"
+
+---
+6. 선택 일정 삭제 (DELETE)
+---
+DELETE FROM schedules 
+
+WHERE schedules_id = 1;
+
+ERD
+-
+ ![사진](https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
