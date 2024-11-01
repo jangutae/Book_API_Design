@@ -54,16 +54,38 @@ Schedules
 * 메소드 : GET
 * 요청URL : /canlander/schedules
 
-* reponse : GET/canlander/schedules
+
+* 예제
+
+* request : X
+
+
+* reponse : HTTP/1.1 200 OK
 
   {
   "schedule_id" : "1",
-  "user_id" : "1234",
   "name" : "과제",
+  "password" : "0000"
+  "content : "lv.0 과제 마무리" 
   "create_date" : "2024-10-31 17:05:33",
   "update_date" : "2024-10-31 17:05:33"      
 }
  
+* 본문
+
+* request : x
+
+* reponse :
+
+  
+|이름|타입|설명|필수|
+|---|---|---|---|
+|name|String|작성자명|Y|
+|password|String|비밀번호|Y|
+|content|String|일정 내용|N|
+|create_date|INT|작성일자|Y|
+|update_date|INT|수정일자|N|
+
 
 선택 일정 조회
 -
