@@ -101,33 +101,21 @@ SQL
 1. 테이블 생성 (Create)
 ---
 
-CREATE TABLE USER (
-
- USER_ID int PRIMAYY KEY,
- 
- nickname varchar(), 
- 
- age varchar(), 
- 
- create_date int, 
- 
- update_date int
- 
- )
 
 CREATE TABLE SCHEDULES (
 
-schedule_id int PRIMARY KEY 
-
-user_id int 
+schedule_id int PRIMARY KEY AUTO_INCREMENT
 
 name varchar() 
+
+password varchar()
+
+title varchar()
 
 create_date int 
 
 update_date int
 
-password varchar() 
 
 )
 
@@ -135,13 +123,9 @@ password varchar()
 2. 유저 생성 및 일정 생성 (Insert)
 ----
 
-INSERT INTO user (user_id, nickname, age, create_date, update_date)
+INSERT INTO schedules (schedules_id, name, password, title, create_date, update_date)
 
-valuse ("1234", "qwer", "20", "2024_10_31 17:05:34")
-
-INSERT INTO schedules (schedules_id, user_id, name, create_date, update_date , password)
-
-valuse ("1234", "4321", "qwer123", "2024_10_31 17:05:34", "qwer123")
+valuse (1234, "홍길동", "qwer123", "대청소", 2024_10_31 17:05:34)
 
 ---
 3. 전체 일정 조회 (Select)
@@ -165,7 +149,9 @@ WHERE schedules_id = 1;
 5. 선택 일정 수정  (Update)
 ---
 
-UPDATE schedules SET name = "asdf123" , update_date = "2024_10_31 17:40:34"
+UPDATE schedules SET name = "홍두깨" , update_date = "2024_10_31 17:40:34" 
+
+WHERE schedule_id =1;
 
 ---
 6. 선택 일정 삭제 (DELETE)
@@ -176,4 +162,4 @@ WHERE schedules_id = 1;
 
 ERD
 -
- ![사진](https://github.com/jangutae/Calander_API_Design/blob/main/ERD.png) 
+ ![사진]) 
