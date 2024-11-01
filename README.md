@@ -20,17 +20,33 @@ Schedules
 
 * request : POST/canlander/schedules
 
+* 예제
 { 
-  "user_id" : "1234",
-  "name" : "일정",
-  "PASSWORD" : "0000"
+  "name" : "홍길동",
+  "password" : "0000"
+  "content" : "lv.0 과제 마무리"
+ 
   }
 
-* reponse :
+* reponse : HTTP/1.1 200 OK
 
 { 
  "schedule_id" = "1"
  }
+
+ * 본문
+
+   * request : 
+
+|이름|타입|설명|필수|
+|name|String|작성자명|Y|
+|password|String|비밀번호|Y|
+|content|String|일정 내용|N|
+
+  * reponse : HTTP/1.1 200 OK
+
+|이름|타입|설명|필수|
+|schedule|String|schedule의 id|Y|
 
 전체 일정 조회
 -
@@ -136,7 +152,7 @@ SELECT *
 FROM schedules
 
 ---
-4. 선태 일정 조회 (select)
+4. 선택 일정 조회 (select)
 ---
 
 SELET *
