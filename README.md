@@ -248,9 +248,9 @@ password varchar(16),
 
 content varchar(250),
 
-create_date int, 
+create_date datetime, 
 
-update_date int
+update_date datetime
 
 
 )
