@@ -35,7 +35,10 @@ Schedules
  }
 
  * 본문
+
+ 
  * request :
+
 
 |이름|타입|설명|필수|
 |---|---|---|---|
@@ -43,11 +46,14 @@ Schedules
 |password|String|비밀번호|Y|
 |content|String|일정 내용|N|
 
+
  * reponse : HTTP/1.1 200 OK
+
 
 |이름|타입|설명|필수|
 |---|---|---|---|
 |schedule|String|schedule의 id|Y|
+
 
 전체 일정 조회
 -
@@ -73,9 +79,12 @@ Schedules
  
 * 본문
 
+
 * request : x
 
+
 * reponse :
+
 
   
 |이름|타입|설명|필수|
@@ -85,6 +94,7 @@ Schedules
 |content|String|일정 내용|N|
 |create_date|INT|작성일자|Y|
 |update_date|INT|수정일자|N|
+
 
 
 선택 일정 조회
