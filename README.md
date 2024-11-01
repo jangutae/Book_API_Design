@@ -89,6 +89,7 @@ Schedules
   
 |이름|타입|설명|필수|
 |---|---|---|---|
+|schedule_id|INT|schedule 의 id|Y|
 |name|String|작성자명|Y|
 |password|String|비밀번호|Y|
 |content|String|일정 내용|N|
@@ -107,7 +108,7 @@ Schedules
 * 예제 :
 
 
-* reponse :
+* reponse : HTTP/1.1 200 OK
 
   {
   "schedule_id" : "1",
@@ -134,6 +135,7 @@ Schedules
 
 |이름|타입|설명|필수|
 |---|---|---|---|
+|schedule_id|INT|schedule 의 id|Y|
 |name|String|작성자명|Y|
 |password|String|비밀번호|Y|
 |content|String|일정 내용|N|
@@ -150,19 +152,38 @@ Schedules
 
 * request : PUT/canlander/schedules/{schedule_id}
 
-{ "schedule_id" : "1",
-  "user_id" : "1234",
-  "name" : "과제",
+{ 
+  "schedule_id" : "1",
+  "name" : "홍두깨",
+  "password" : "0000"
+  "content : "lv.1 과제 마무리" 
   }
 
 
-* reponse :
+* reponse : HTTP/1.1 200 OK
 
 {
   "schedule_id" : "1",
-  "user_id" : "1234",
-  "name" : "과제",
 }
+
+* 본문
+
+* reqeust
+
+|이름|타입|설명|필수|
+|---|---|---|---|
+|schedule_id|INT|schedule 의 id|Y|
+|name|String|작성자명|Y|
+|password|String|비밀번호|Y|
+|content|String|일정 내용|N|
+
+  
+* reponse
+
+|이름|타입|설명|필수|
+|---|---|---|---|
+|schedule|String|schedule의 id|Y|
+
 
 선택 일정 삭제
 -
