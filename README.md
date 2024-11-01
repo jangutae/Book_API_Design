@@ -298,4 +298,4 @@ WHERE schedules_id = 1;
 
 ERD
 -
- ![사진]() 
+ ![사진](https://github.com/jangutae/Calander_API_Design/blob/main/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC4.png) 
