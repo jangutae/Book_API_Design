@@ -35,8 +35,7 @@ Schedules
  }
 
  * 본문
-
-   * request :
+ * request :
 
 |이름|타입|설명|필수|
 |---|---|---|---|
@@ -44,7 +43,7 @@ Schedules
 |password|String|비밀번호|Y|
 |content|String|일정 내용|N|
 
-  * reponse : HTTP/1.1 200 OK
+ * reponse : HTTP/1.1 200 OK
 
 |이름|타입|설명|필수|
 |---|---|---|---|
