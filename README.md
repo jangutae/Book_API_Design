@@ -18,9 +18,13 @@ Schedules
 * 메소드 : POST
 * 요청URL : /canlander/schedules
 
-* request : POST/canlander/schedules
 
 * 예제
+
+
+* request : POST/canlander/schedules
+
+
 { 
   "name" : "홍길동",
   "password" : "0000"
@@ -37,7 +41,7 @@ Schedules
  * 본문
 
  
- * request :
+ * request 
 
 
 |이름|타입|설명|필수|
@@ -47,7 +51,7 @@ Schedules
 |content|String|일정 내용|N|
 
 
- * reponse : HTTP/1.1 200 OK
+ * reponse 
 
 
 |이름|타입|설명|필수|
@@ -80,10 +84,10 @@ Schedules
 * 본문
 
 
-* request : x
+* request : X 
 
 
-* reponse :
+* reponse 
 
 
   
@@ -103,9 +107,11 @@ Schedules
 * 메소드 : GET
 * 요청URL : /canlander/schedules/{schedule_id}
 
-* request : GET/canlander/schedules/{schedule_id}
 
 * 예제 :
+
+  
+* request : GET/canlander/schedules/{schedule_id}
 
 
 * reponse : HTTP/1.1 200 OK
@@ -150,6 +156,8 @@ Schedules
 * 메소드 : PUT
 * 요청URL : /canlander/schedules/{schedule_id}
 
+* 예제 :
+
 * request : PUT/canlander/schedules/{schedule_id}
 
 { 
@@ -165,6 +173,7 @@ Schedules
 {
   "schedule_id" : "1",
 }
+
 
 * 본문
 
@@ -190,8 +199,36 @@ Schedules
 * 메소드 : DELETE
 * 요청URL : /canlander/schedules/{schedule_id}
 
+* 예제 : 
+
 * request : DELETE/canlander/schedules/{schedule_id}
 
+
+* reponse : HTTP/1.1 200 OK
+
+
+  {
+  "schedule_id" : "1",
+}
+
+
+* 본문
+  
+
+* request
+
+
+|이름|타입|설명|필수|
+|---|---|---|---|
+|schedule|String|schedule의 id|Y|
+
+
+* reponse
+ 
+
+|이름|타입|설명|필수|
+|---|---|---|---|
+|schedule|String|schedule의 id|Y|
 
 SQL 
 --
