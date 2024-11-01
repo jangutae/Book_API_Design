@@ -246,7 +246,7 @@ name varchar()
 
 password varchar()
 
-title varchar()
+content varchar()
 
 create_date int 
 
